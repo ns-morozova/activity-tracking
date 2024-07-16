@@ -1,0 +1,129 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form {
+  font-family: Arial, sans-serif;
+  width: 500px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 14px;
+  border: 1px #d8d8d8 solid;
+  border-radius: 4px;
+}
+
+.form h2 {
+  margin: 0;
+  font-size: 18px;
+  text-align: center;
+}
+
+.inputRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 14px;
+  gap: 10px;
+}
+
+.inputRow div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-weight: 600;
+}
+
+.input {
+    outline: none;
+    font-size: 12px;
+    font-weight: 400;
+    width: 120px;
+}
+
+.button {
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+td {
+  display: table-cell;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+td svg {
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Arial, sans-serif;
+  background: white;
+  border: 1px #d8d8d8 solid;
+  border-radius: 4px;
+  width: 400px;
+  height: 120px;
+  padding: 20px;
+  z-index: 3;
+}
+
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.modalContent h2 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.modalActions {
+  display: flex;
+  gap: 15px;
+}
+
+.buttonModal {
+  width: 80px;
+  font-size: 12px;
+  cursor: pointer;
+}
