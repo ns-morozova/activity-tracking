@@ -1,7 +1,6 @@
-image: Visual Studio 2019 # образ для сборки
+image: Ubuntu2204 # образ для сборки
 
-environment:
-  nodejs_version: "20"
+stack: node 20  # окружение
 
 branches:
   only:
@@ -22,7 +21,7 @@ test_script:
 
 deploy_script:  # скрипт развёртывания
   - git config --global credential.helper store
-  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:GITHUB_TOKEN):x-oauth-basic@github.com`n"
+  - echo "https://$GITHUB_TOKEN:x-oauth-basic@github.com">"$HOME/.git-credentials"
   - git config --global user.name ns-morozova
   - git config --global user.email ns_morozova@mail.ru  
   - yarn dlx push-dir --dir=dist --branch=gh-pages --force --verbose
